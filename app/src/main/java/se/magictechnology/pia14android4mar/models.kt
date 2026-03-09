@@ -10,5 +10,5 @@ data class TrelloBoard(val name : String, val desc : String)
 data class TrelloList(val id : String, val name : String)
 
 @Serializable
-data class TrelloCard(val id : String, val name : String)
+data class TrelloCard(val id : String, var name : String, var desc: String)
 

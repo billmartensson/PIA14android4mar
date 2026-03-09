@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -32,7 +33,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             PIA14android4marTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Trellotest()
+                    Column(modifier = Modifier.padding(innerPadding)) {
+                        TrelloNav()
+                    }
                 }
             }
         }
